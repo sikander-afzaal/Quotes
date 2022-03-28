@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import dice from "./Assets/images/icon-dice.svg";
 import dividerDesk from "./Assets/images/pattern-divider-desktop.svg";
 import dividerMobile from "./Assets/images/pattern-divider-mobile.svg";
+import music from "./Assets/muusic.mp3";
 function App() {
   const data = [
     {
@@ -167,6 +168,8 @@ function App() {
     setTimeout(() => {
       setTrans(false);
     }, 450);
+    const audio = document.querySelector(".audio");
+    audio.play();
   };
   return (
     <div className="App">
@@ -186,6 +189,8 @@ function App() {
           />
         </div>
       </div>
+
+      <audio className="audio" src={music} autoPlay loop></audio>
     </div>
   );
 }
