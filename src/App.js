@@ -145,24 +145,42 @@ function App() {
     },
   ];
   const [quote, setQuote] = useState(data[1].quote);
-  const [number, setNum] = useState(data[1].num);
+  const [number, setNum] = useState(0);
+  const [className, setClassName] = useState(false);
+  const [trans, setTrans] = useState(false);
   const random = () => {
-    const randomNum = Math.floor(Math.random() * data.length);
-    setQuote(data[randomNum].quote);
-    setNum(randomNum);
+    setTrans(false);
+    setTimeout(() => {
+      const randomNum = Math.floor(Math.random() * data.length);
+      setQuote(data[randomNum].quote);
+      setNum(randomNum);
+    }, 450);
+
+    setClassName(true);
+    setTimeout(() => {
+      setClassName(false);
+    }, 150);
+    setTrans(true);
+    setTimeout(() => {
+      setTrans(false);
+    }, 450);
   };
   return (
     <div className="App">
       <div className="box">
         <h2 className="head">Quote #{number}</h2>
-        <p className="advice">
+        <p className={`advice ${trans ? "" : "trans"}`}>
           &#8220; {quote}
           &#8221;
         </p>
         <img src={dividerDesk} alt="" className="divider desk" />
         <img src={dividerMobile} alt="" className="divider mob" />
-        <div onClick={random} className="dice-div">
-          <img src={dice} alt="" className="dice" />
+        <div onClick={random} className={`dice-div`}>
+          <img
+            src={dice}
+            alt=""
+            className={`dice  ${className ? "shake" : ""}`}
+          />
         </div>
       </div>
     </div>
