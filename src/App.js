@@ -143,9 +143,6 @@ function App() {
     {
       quote: `ae quaid e aazam tera ehsaaaa nihe ehsaan`,
     },
-    {
-      quote: ``,
-    },
   ];
   const [quote, setQuote] = useState(data[1].quote);
   const [number, setNum] = useState(data[1].num);
