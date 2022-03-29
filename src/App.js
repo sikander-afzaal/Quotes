@@ -153,6 +153,9 @@ function App() {
     {
       quote: `beshak saza ha nasha ye banisbat jaam k // hum nay ki ghustaakhi se beghawati saza e kaand walay kaam se`,
     },
+    {
+      quote: `**literally no one** Fahad: 'mEiNe FhGraoo'`,
+    },
   ];
   const [quote, setQuote] = useState(data[1].quote);
   const [number, setNum] = useState(0);
