@@ -150,6 +150,9 @@ function App() {
     {
       quote: `aqal ho kam magar beshak jaanta ha har zaheen larka // chicken k bina biryani ha jaise halaq k baghair "Aeen" parhnad`,
     },
+    {
+      quote: `beshak saza ha nasha ye banisbat jaam k // hum nay ki ghustaakhi se beghawati saza e kaand walay kaam se`,
+    },
   ];
   const [quote, setQuote] = useState(data[1].quote);
   const [number, setNum] = useState(0);
