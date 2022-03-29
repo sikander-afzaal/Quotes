@@ -145,7 +145,10 @@ function App() {
       quote: `ae quaid e aazam tera ehsaaaa nihe ehsaan`,
     },
     {
-      quote: `Fahad man another sindhi joke WILL get you ROCKED // Punches Harder than CRYStals will spill on you dawg! `,
+      quote: `Fahad man another sindhi joke WILL get you ROCKED // Punches Harder than CRYStals will spill on you dawg!`,
+    },
+    {
+      quote: `aqal ho kam magar beshak jaanta ha har zaheen larka // chicken k bina biryani ha jaise halaq k baghair "Aeen" parhnad`,
     },
   ];
   const [quote, setQuote] = useState(data[1].quote);
