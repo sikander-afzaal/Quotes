@@ -4,6 +4,7 @@ import dice from "./Assets/images/icon-dice.svg";
 import dividerDesk from "./Assets/images/pattern-divider-desktop.svg";
 import dividerMobile from "./Assets/images/pattern-divider-mobile.svg";
 import music from "./Assets/muusic.mp3";
+import arrow from "./Assets/arrow.png";
 function App() {
   const data = [
     {
@@ -160,6 +161,7 @@ function App() {
   const [quote, setQuote] = useState(data[1].quote);
   const [number, setNum] = useState(0);
   const [className, setClassName] = useState(false);
+  const [open, setOpen] = useState(false);
   const [trans, setTrans] = useState(false);
   const random = () => {
     setTrans(false);
@@ -198,7 +200,14 @@ function App() {
           />
         </div>
       </div>
-
+      <img
+        onClick={() => setOpen((prev) => !prev)}
+        src={arrow}
+        alt=""
+        className={`arrow-left ${open ? "anim-arrow" : ""}`}
+      />
+      <div className="shadow"></div>
+      <div className={`left-about ${open ? "anim-dabba" : "delay"}`}></div>
       <audio className="audio" src={music} autoPlay loop></audio>
     </div>
   );
