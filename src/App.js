@@ -5,6 +5,10 @@ import dividerDesk from "./Assets/images/pattern-divider-desktop.svg";
 import dividerMobile from "./Assets/images/pattern-divider-mobile.svg";
 import music from "./Assets/muusic.mp3";
 import arrow from "./Assets/arrow.png";
+import noor from "./Assets/noor.png";
+import noorsmol1 from "./Assets/noor-smol1.png";
+import noorsmol2 from "./Assets/noor-smol2.png";
+import noorsmol3 from "./Assets/noor-smol3.png";
 function App() {
   const data = [
     {
@@ -157,6 +161,9 @@ function App() {
     {
       quote: `**literally no one** Fahad: 'mEiNe FhGraoo'`,
     },
+    {
+      quote: `Tu manyeen manyeen na mehrbaan // maa ta minth tho karray chaddyaan`,
+    },
   ];
   const [quote, setQuote] = useState(data[1].quote);
   const [number, setNum] = useState(0);
@@ -206,8 +213,16 @@ function App() {
         alt=""
         className={`arrow-left ${open ? "anim-arrow" : ""}`}
       />
-      <div className="shadow"></div>
-      <div className={`left-about ${open ? "anim-dabba" : "delay"}`}></div>
+      <div className={`shadow ${open ? "anim-shadow" : ""}`}></div>
+      <div className={`left-about ${open ? "anim-dabba" : "delay"}`}>
+        <h1>Noor Muhammad</h1>
+        <img className="main" src={noor} alt="" />
+        <div className="row-noor">
+          <img src={noorsmol1} alt="" className="row-img" />
+          <img src={noorsmol2} alt="" className="row-img" />
+          <img src={noorsmol3} alt="" className="row-img" />
+        </div>
+      </div>
       <audio className="audio" src={music} autoPlay loop></audio>
     </div>
   );
