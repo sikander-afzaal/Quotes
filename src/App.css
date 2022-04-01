@@ -147,6 +147,16 @@
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), transparent);
   height: 100vh;
 }
+.main{
+  max-width:90%;
+  object-fit: contain;
+}
+.wrapper-img{
+  display: flex;
+  width: 100%;
+  justify-content:flex-start;
+  align-items: center;
+}
 .left-about {
   position: absolute;
   right: -100vw;
@@ -162,35 +172,18 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 3rem 1rem 0rem 1rem;
+  padding: 3rem 0rem;
   gap: 2rem;
   flex-direction: column;
+  overflow: visible;
+}
+.left-about * {
+  overflow: visible;
 }
 .left-about h1 {
   font-family: "Jost", sans-serif;
   font-size: 3rem;
   text-align: center;
-}
-.main {
-  max-width: 100%;
-  object-fit: contain;
-  border-radius: 25px;
-  flex: 0.6;
-}
-
-.row-noor {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  flex: 0.3;
-}
-.row-img {
-  justify-self: center;
-  max-width: 100%;
-  object-fit: contain;
-  flex-wrap: wrap;
-  border-radius: 10px;
 }
 
 .anim-dabba {

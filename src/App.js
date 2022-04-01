@@ -11,6 +11,8 @@ import noorsmol2 from "./Assets/noor-smol2.png";
 import noorsmol3 from "./Assets/noor-smol3.png";
 import muteimg from "./Assets/mute.png";
 import vol from "./Assets/volume.png";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 function App() {
   const data = [
     {
@@ -245,12 +247,43 @@ function App() {
       <div className={`shadow ${open ? "anim-shadow" : ""}`}></div>
       <div className={`left-about ${open ? "anim-dabba" : "delay"}`}>
         <h1>Noor Muhammad</h1>
-        <img className="main" src={noor} alt="" />
-        <div className="row-noor">
-          <img src={noorsmol1} alt="" className="row-img" />
-          <img src={noorsmol2} alt="" className="row-img" />
-          <img src={noorsmol3} alt="" className="row-img" />
-        </div>
+
+        <Splide
+          options={{
+            autoplay: "play",
+            type: "loop",
+            rewind: true,
+            perPage: 1,
+            height: "auto",
+            gap: "0",
+            width: "97%",
+            arrows: false,
+            pagination: false,
+            perMove: 1,
+            drag: true,
+          }}
+        >
+          <SplideSlide>
+            <div className="wrapper-img">
+              <img className="main" src={noor} alt="" />
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className="wrapper-img">
+              <img className="main" src={noorsmol1} alt="" />
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className="wrapper-img">
+              <img className="main" src={noorsmol2} alt="" />
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className="wrapper-img">
+              <img className="main" src={noorsmol3} alt="" />
+            </div>
+          </SplideSlide>
+        </Splide>
       </div>
       <audio className="audio" src={music} autoPlay loop></audio>
     </div>
