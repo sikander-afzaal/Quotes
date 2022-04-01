@@ -246,8 +246,6 @@ function App() {
       />
       <div className={`shadow ${open ? "anim-shadow" : ""}`}></div>
       <div className={`left-about ${open ? "anim-dabba" : "delay"}`}>
-        <h1>Noor Muhammad</h1>
-
         <Splide
           options={{
             autoplay: "play",
@@ -261,6 +259,15 @@ function App() {
             pagination: false,
             perMove: 1,
             drag: true,
+            breakpoints: {
+              1615: {
+                perPage: 3,
+              },
+              969: {
+                perPage: 1,
+                width: "100%",
+              },
+            },
           }}
         >
           <SplideSlide>
@@ -284,6 +291,19 @@ function App() {
             </div>
           </SplideSlide>
         </Splide>
+        <h1>Noor Muhammad</h1>
+        <p className="desc">
+          Born in late 2003, in a small town of karachi Noor Muhammad birthed
+          himself and has now quickly become renowned as the shaa'ir e mashriq,
+          replacing Iqbal. His childhood was nothing but abnormal aside from the
+          normal side of things. Once upon a time, he was get hit in head in
+          past but paid no HEED to setbacks and unleashed his inner ghalib.
+          Nonetheless, He continues his journey to over take iqbal as shaa'ir e
+          mashriq and has already taken his spot. His friends, Afzaal, Molai and
+          ahmed^2, so inspired by his poetry and shaa'iri, took a vow to
+          immortalize his legacy and make him da shaa'ir e mashriq in cement and
+          make this Website, as a homage to their appreciation of his art.
+        </p>
       </div>
       <audio className="audio" src={music} autoPlay loop></audio>
     </div>

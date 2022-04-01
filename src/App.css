@@ -170,10 +170,10 @@
   border-bottom-left-radius: 20px;
   box-shadow: -10px 0px 20px 0px rgba(0, 0, 0, 0.7);
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding: 3rem 0rem;
-  gap: 2rem;
+  padding: 1rem 0rem;
+  gap: 1rem;
   flex-direction: column;
   overflow: visible;
 }
@@ -192,7 +192,12 @@
 .delay {
   transition-delay: 0.2s;
 }
-
+.desc{
+  padding-left: 1rem;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+}
 @media screen and (max-width: 1615px) {
   .left-about {
     width: 80%;
@@ -215,6 +220,22 @@
     height: 80%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    padding-top: 10rem;
+    overflow-y: scroll;
+  }
+  .main {
+    max-width: 100%;
+    object-fit: contain;
+  }
+  .desc{
+    text-align: center;
+    padding: 0;
+  }
+  .wrapper-img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
   .arrow-left {
     right: 50%;
