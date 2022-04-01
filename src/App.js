@@ -9,6 +9,8 @@ import noor from "./Assets/noor.png";
 import noorsmol1 from "./Assets/noor-smol1.png";
 import noorsmol2 from "./Assets/noor-smol2.png";
 import noorsmol3 from "./Assets/noor-smol3.png";
+import muteimg from "./Assets/mute.png";
+import vol from "./Assets/volume.png";
 function App() {
   const data = [
     {
@@ -170,6 +172,7 @@ function App() {
   const [className, setClassName] = useState(false);
   const [open, setOpen] = useState(false);
   const [trans, setTrans] = useState(false);
+  const [mute, setMute] = useState(false);
   const random = () => {
     setTrans(false);
     setTimeout(() => {
@@ -189,8 +192,34 @@ function App() {
     const audio = document.querySelector(".audio");
     audio.play();
   };
+  const muteFunc = (bool) => {
+    const audio = document.querySelector(".audio");
+    if (bool) {
+      audio.muted = false;
+    } else {
+      audio.muted = true;
+    }
+    setMute((prev) => {
+      return !prev;
+    });
+  };
   return (
     <div className="App">
+      {mute ? (
+        <img
+          onClick={() => muteFunc(true)}
+          src={muteimg}
+          className="volume"
+          alt=""
+        />
+      ) : (
+        <img
+          onClick={() => muteFunc(false)}
+          src={vol}
+          className="volume"
+          alt=""
+        />
+      )}
       <div className="box">
         <h2 className="head">Quote #{number}</h2>
         <p className={`advice ${trans ? "" : "trans"}`}>
