@@ -168,6 +168,9 @@ function App() {
     {
       quote: `Tu manyeen manyeen na mehrbaan // maa ta minth tho karray chaddyaan`,
     },
+    {
+      quote: `ajal hi na jal honay k bawajud teri hayat cheen leni ha . lutf utha le puri kehkashan ka eik din ajal na teri sans cheen leni ha`,
+    },
   ];
   const [quote, setQuote] = useState(data[1].quote);
   const [number, setNum] = useState(0);
