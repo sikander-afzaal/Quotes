@@ -171,6 +171,9 @@ function App() {
     {
       quote: `ajal hi na jal honay k bawajud teri hayat cheen leni ha . lutf utha le puri kehkashan ka eik din ajal na teri sans cheen leni ha`,
     },
+    {
+      quote: `😎😛😌😲`,
+    },
   ];
   const [quote, setQuote] = useState(data[1].quote);
   const [number, setNum] = useState(0);
